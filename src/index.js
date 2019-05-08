@@ -177,7 +177,8 @@ const SocialLogin = (WrappedComponent) => class SocialLogin extends Component {
       this.setState((prevState) => ({
         ...prevState,
         isFetching: false,
-        isConnected: true
+        isConnected: true,
+        isLoaded: true
       }), () => {
         if (typeof onLoginSuccess === 'function') {
           onLoginSuccess(user)
@@ -201,7 +202,8 @@ const SocialLogin = (WrappedComponent) => class SocialLogin extends Component {
       this.setState((prevState) => ({
         ...prevState,
         isFetching: false,
-        isConnected: false
+        isConnected: false,
+        isLoaded: true
       }), () => {
         if (typeof onLoginFailure === 'function') {
           onLoginFailure(err)
